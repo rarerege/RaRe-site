@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaRe Search</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .search-container {
+            margin-top: 15vh;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .logo {
+            text-align: center;
+            color: #fff;
+            font-size: 3.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 2rem;
+        }
+
+        .search-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            padding: 10px 25px;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin-bottom: 15px;
+        }
+
+        .search-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        input[type="text"] {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-size: 1.1rem;
+            padding: 12px 0;
+        }
+
+        input[type="text"]::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        button {
+            background: #4CAF50;
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+
+        .search-options {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .image-search {
+            background: #2196F3;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1 class="logo">RaRe Search</h1>
+
+        <!-- Web Search Form -->
+        <form class="search-box" action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Search or enter URL" required autocomplete="off" autofocus>
+            <button type="submit">Web</button>
+        </form>
+
+        <!-- Image Search Form -->
+        <form class="search-box" action="https://www.google.com/images" method="GET">
+            <input type="text" name="q" placeholder="Search or enter URL" required autocomplete="off">
+            <button type="submit" class="image-search">Images</button>
+        </form>
+    </div>
+</body>
+</html>
