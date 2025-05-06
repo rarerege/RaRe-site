@@ -5,7 +5,6 @@ RaRe Search is a minimalist and elegant custom search interface built with HTML 
 
 ##  Features
 
-- Sleek, modern design with gradient background and glassmorphism effect.
 - Dual search functionality:
   -  Web search
   -  Image search
